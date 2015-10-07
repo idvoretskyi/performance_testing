@@ -1,0 +1,1000 @@
+ 1432  cd ..
+ 1433  cd
+ 1434  cd rethinkdb/build/release_clang/
+ 1435  ls
+ 1436  /usr/bin/rethinkdb -o 23 --bind all
+ 1437  ./rethinkdb -o 23 --bind all
+ 1438  ls
+ 1439  rm -R rethinkdb_data/
+ 1440  ./rethinkdb -o 23 --bind all
+ 1441  cd ..
+ 1442  ls
+ 1443  cd debug_clang/
+ 1444  ls
+ 1445  ./rethinkdb -o 23 --bind all --cache-size 10
+ 1446  ls
+ 1447  cp -R rethinkdb_data/ data.bak
+ 1448  du -sh rethinkdb_data
+ 1449  ./rethinkdb -o 23 --bind all --cache-size 10
+ 1450  rm -R rethinkdb_data/
+ 1451  ;s
+ 1452  ls
+ 1453  cp -R data.bak rethinkdb_data
+ 1454  ./rethinkdb -o 23 --bind all --cache-size 10
+ 1455  ls
+ 1456  rm -R rethinkdb_data/
+ 1457  ./rethinkdb -o 23 --bind all --cache-size 10
+ 1458  ./rethinkdb -o 23 --bind all --cache-size 1000
+ 1459  ls
+ 1460  rm -R rethinkdb_data/
+ 1461  cp -R data.bak rethinkdb_data
+ 1462  ./rethinkdb -o 23 --bind all --cache-size 10
+ 1463  exit
+ 1464  mv adrien-wl.php php-rql/
+ 1465  cd php-rql/
+ 1466  nano -w adrien-wl.php 
+ 1467  php5 adrien-wl.php 
+ 1468  nano -w adrien-wl.php 
+ 1469  php5 adrien-wl.php 
+ 1470  nano -w adrien-wl.php 
+ 1471  php5 adrien-wl.php 
+ 1472  nano -w adrien-wl.php 
+ 1473  php5 adrien-wl.php 
+ 1474  nano -w adrien-wl.php 
+ 1475  php5 adrien-wl.php 
+ 1476  nano -w adrien-wl.php 
+ 1477  php5 adrien-wl.php 
+ 1478  cd rethink
+ 1479  cd rethinkdb
+ 1480  ls
+ 1481  git status
+ 1482  make -j 300 DEBUG=1
+ 1483  cd build/debug_clang/
+ 1484  ls
+ 1485  ./rethinkdb -o 24 --bind all
+ 1486  cd ..
+ 1487  CXX=rec++ ./configure --with-system-malloc
+ 1488  make -j 300 DEBUG=1 VALGRIND=1
+ 1489  cd build/debug_clang_valgrind_system/
+ 1490  ls
+ 1491  valgrind --suppressions=~/rethinkdb/scripts/rethinkdb-valgrind-suppressions.supp ./rethinkdb -o 24 --bind all
+ 1492  valgrind --suppressions=/home/daniel/rethinkdb/scripts/rethinkdb-valgrind-suppressions.supp ./rethinkdb -o 24 --bind all
+ 1493  cd ..
+ 1494  git status
+ 1495  cd ..
+ 1496  cd src/
+ 1497  nano -w rdb_protocol/changefeed.cc
+ 1498  nano -w rdb_protocol/changefeed.hpp 
+ 1499  cd ..
+ 1500  make -j 300 DEBUG=1
+ 1501  cd build/debug_clang
+ 1502  ls
+ 1503  rm -R rethinkdb_data/
+ 1504  ./rethinkdb -o 24 --bind all
+ 1505  cd ..
+ 1506  ls
+ 1507  cd debug_clang_system/
+ 1508  ls
+ 1509  ./rethinkdb -o 24 --bind all
+ 1510  cd ..
+ 1511  make -j 300 DEBUG=1 VALGRIND=1
+ 1512  cd build/debug_clang_valgrind_system/
+ 1513  ls
+ 1514  rm -R rethinkdb_data/
+ 1515  valgrind --suppressions=/home/daniel/rethinkdb/scripts/rethinkdb-valgrind-suppressions.supp /.rethinkdb -o 24 --bind all
+ 1516  cd ..
+ 1517  git diff
+ 1518  make -j 300 DEBUG=0
+ 1519  cd build/release_clang_system/
+ 1520  ls
+ 1521  ./rethinkdb -o 24 --bind all
+ 1522  cd rethinkdb
+ 1523  ls
+ 1524  git status
+ 1525  git checkout v2.1.x
+ 1526  git status
+ 1527  git branch daniel_4852
+ 1528  git checkout daniel_4852 
+ 1529  git diff
+ 1530  make clean
+ 1531  CXX=rec++ ./configure
+ 1532  make -j 300 DEBUG=1
+ 1533  cd build/debug_clang/
+ 1534  ls
+ 1535  ./rethinkdb -o 23 --bind all
+ 1536  killall rethinkdb
+ 1537  ./rethinkdb -o 23 --bind all
+ 1538  cd php-rql/
+ 1539  ls
+ 1540  cp tmp.php tmp2.php
+ 1541  nano -w tmp2.php 
+ 1542  php5 tmp2.php 
+ 1543  nano -w tmp2.php 
+ 1544  php5 tmp2.php 
+ 1545  ssh magneto
+ 1546  ssh electro
+ 1547  ssh magneto
+ 1548  cd /tmp/daniel/
+ 1549  rethinkdb -o 23 --bind all
+ 1550  ssh electro
+ 1551  ssh gantz
+ 1552  ls
+ 1553  cd user-data/
+ 1554  ls
+ 1555  scp bugdrop.rethinkdb.com:~/addimation-2015-08-30_00-11-16_utc.tar ./
+ 1556  scp addimation-2015-08-30_00-11-16_utc.tar gantz:~/
+ 1557  ping gantz
+ 1558  scp addimation-2015-08-30_00-11-16_utc.tar gantz:~/
+ 1559  ls
+ 1560  rethinkdb restore addimation-2015-08-30_00-11-16_utc.tar -c gantz
+ 1561  base64 
+ 1562  base64 --help
+ 1563  base64 -d
+ 1564  cd rethinkdb
+ 1565  ls
+ 1566  cd /tmp/
+ 1567  cd daniel
+ 1568  ls
+ 1569  rethinkdb -o 23 --bind all
+ 1570  killall rethinkdb
+ 1571  rm -R rethinkdb_data/
+ 1572  rethinkdb -o 23 --bind all -d data_23 &
+ 1573  rethinkdb -o 24 --bind all -d data_24 -j localhost:29038 &
+ 1574  killall rethinkdb
+ 1575  exit
+ 1576  ssh root@104.130.19.19
+ 1577  exit
+ 1578  ls
+ 1579  cat .ssh/
+ 1580  ls .ssh/
+ 1581  nano -w .ssh/id_rsa.pub 
+ 1582  gedit .ssh/id_rsa.pub 
+ 1583  exit
+ 1584  cd rethinkdb
+ 1585  make -j 300 DEBUG=1
+ 1586  git checkout v2.1.x
+ 1587  git checkout v2.1.4
+ 1588  git reset --hard
+ 1589  git branch -D daniel_4852
+ 1590  git status
+ 1591  make -j 300 DEBUG=1
+ 1592  ls
+ 1593  cd build/debug_clang/
+ 1594  ls
+ 1595  rm -R rethinkdb_data/
+ 1596  cp -R /tmp/daniel-replica/* ./
+ 1597  ls
+ 1598  tail 1/log_file 
+ 1599  tail -n 50 1/log_file 
+ 1600  cd ..
+ 1601  make -j 300 DEBUG=1
+ 1602  git status
+ 1603  git reset --hard
+ 1604  ssh magneto
+ 1605  ssh electro
+ 1606  ssh electro
+ 1607  ssh electro
+ 1608  ssh magneto
+ 1609  ssh magneto
+ 1610  ssh bugdrop.rethinkdb.com
+ 1611  exit
+ 1612  cd rethinkdb/build/debug_clang/
+ 1613  ls
+ 1614  ./rethinkdb-unittest --gtest_filter=LeafNodeTest.RandomizedSplitting
+ 1615  clear
+ 1616  ./rethinkdb-unittest --gtest_filter=LeafNodeTest.RandomizedSplitting
+ 1617  cd ..
+ 1618  cd test/interface/
+ 1619  ls
+ 1620  mkdir tmp
+ 1621  rm -R ?_data
+ 1622  ls
+ 1623  cd tmp/
+ 1624  ls
+ 1625  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1626  ls
+ 1627  rm -R *
+ 1628  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1629  killall -9 rethinkdb
+ 1630  rm -R *
+ 1631  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1632  ls
+ 1633  rm -R *
+ 1634  ls
+ 1635  jobs
+ 1636  ps ax
+ 1637  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1638  ls
+ 1639  rm -R *
+ 1640  rm -R ~/rethinkdb/build/release/
+ 1641  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1642  rm -R ~/rethinkdb/build/release/
+ 1643  ls
+ 1644  rm -R *
+ 1645  rm -R ~/rethinkdb/build/release/
+ 1646  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1647  ls
+ 1648  cat a_oar/log_file.txt 
+ 1649  cat b_zeh/log_file.txt 
+ 1650  cat c_ptk/log_file.txt 
+ 1651  cat d_rzx/log_file.txt 
+ 1652  cat e_pni/log_file.txt 
+ 1653  cat f_swl/log_file.txt 
+ 1654  ls
+ 1655  rm -R ~/rethinkdb/build/release/
+ 1656  rm -R ~/rethinkdb/build/debug/
+ 1657  rm -R *
+ 1658  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1659  rm -R *
+ 1660  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1661  ls
+ 1662  cat a_pzf/log_file.txt 
+ 1663  tail a_pzf/log_file.txt 
+ 1664  tail b_fgv/log_file.txt 
+ 1665  tail c_cdj/log_file.txt 
+ 1666  tail d_ruv/log_file.txt 
+ 1667  cat d_ruv/log_file.txt
+ 1668  rm -R *
+ 1669  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1670  ls
+ 1671  head a_gow/log_file.txt 
+ 1672  head b_lhv/log_file.txt 
+ 1673  head c_wbt/log_file.txt 
+ 1674  head d_kjd/log_file.txt 
+ 1675  head e_gvm/log_file.txt 
+ 1676  head f_fft/log_file.txt 
+ 1677  head g_qcq/log_file.txt 
+ 1678  tail g_qcq/log_file.txt 
+ 1679  tail a_gow/log_file.txt 
+ 1680  less a_gow/log_file.txt 
+ 1681  rm -R *
+ 1682  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0 -c 1"
+ 1683  cc
+ 1684  ls
+ 1685  tail a_uwj/log_file.txt 
+ 1686  tail b_apb/log_file.txt 
+ 1687  tail c_wyu/log_file.txt 
+ 1688  tail d_czr/log_file.txt 
+ 1689  less d_czr/log_file.txt 
+ 1690  rm -R *
+ 1691  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0 -c 1"
+ 1692  ls
+ 1693  tail a_khd/log_file.txt 
+ 1694  tail b_qxg/log_file.txt 
+ 1695  tail c/log_file.txt 
+ 1696  tail c_kga/log_file.txt 
+ 1697  tail d_cbh/log_file.txt 
+ 1698  tail e_ejj/log_file.txt 
+ 1699  less e_ejj/log_file.txt 
+ 1700  rm -R *
+ 1701  ls
+ 1702  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0 -c 1"
+ 1703  ls
+ 1704  tail a_dse/log_file.txt 
+ 1705  tail b_iaw/log_file.txt 
+ 1706  less b_iaw/log_file.txt 
+ 1707  rm -R *
+ 1708  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0 -c 1"
+ 1709  ls
+ 1710  tail a_mws/log_file.txt 
+ 1711  less a_mws/log_file.txt 
+ 1712  rm -R *
+ 1713  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0 -c 1"
+ 1714  ls
+ 1715  tail a_ojz/log_file.txt 
+ 1716  tail b_sht/log_file.txt 
+ 1717  tail c_roz/log_file.txt 
+ 1718  tail d_qsv/log_file.txt 
+ 1719  tail e_cyx/log_file.txt 
+ 1720  tail f_oby/log_file.txt 
+ 1721  tail g_ohe/log_file.txt 
+ 1722  tail h_yjz/log_file.txt 
+ 1723  less h_yjz/log_file.txt 
+ 1724  cp h_yjz/log_file.txt ~/
+ 1725  grep "0x7f6b1a103fa0" h_yjz/log_file.txt
+ 1726  grep "0x7f6b1a103fa0" h_yjz/log_file.txt > ~/filteres.txt
+ 1727  grep "0x7f6b1a103fa0" h_yjz/log_file.txt > ~/filtered.txt
+ 1728  rm ~/filteres.txt 
+ 1729  ls
+ 1730  rm -R *
+ 1731  rm ~/log_file.txt 
+ 1732  ../table_fuzzer.py --servers 8 --threads 8 --serve-flags "--cache-size 0"
+ 1733  killall rethinkdb
+ 1734  rm ~/log_file.txt 
+ 1735  rm -R *
+ 1736  ../table_fuzzer.py --servers 8 --threads 64 --serve-flags "--cache-size 100"
+ 1737  ls
+ 1738  killall rethinkdb
+ 1739  ls
+ 1740  tail a_mgv/log_file.txt 
+ 1741  tail b_tli/log_file.txt 
+ 1742  tail c_eux/log_file.txt 
+ 1743  tail d_aus/log_file.txt 
+ 1744  tail e_wvq/log_file.txt 
+ 1745  tail f_bys/log_file.txt 
+ 1746  tail g_uks/log_file.txt 
+ 1747  less g_uks/log_file.txt 
+ 1748  ls
+ 1749  rm -R *
+ 1750  ../table_fuzzer.py --servers 8 --threads 64 --serve-flags "--cache-size 100"
+ 1751  ls
+ 1752  cd ..
+ 1753  ls
+ 1754  cd tmp/
+ 1755  ../table_fuzzer.py --servers 8 --threads 64 --serve-flags "--cache-size 100"
+ 1756  rm -R *
+ 1757  ../table_fuzzer.py --servers 8 --threads 64 --serve-flags "--cache-size 100"
+ 1758  rm -R *
+ 1759  ../table_fuzzer.py --servers 8 --threads 64 --serve-flags "--cache-size 100"
+ 1760  rm -R *
+ 1761  ../table_fuzzer.py --servers 8 --threads 64 --serve-flags "--cache-size 100"
+ 1762  ls
+ 1763  tail a_xgt/log_file.txt 
+ 1764  tail b_xhc/log_file.txt 
+ 1765  tail c_mlp/log_file.txt 
+ 1766  tail d_dvn/log_file.txt 
+ 1767  tail e_ooy/log_file.txt 
+ 1768  tail f_cgz/log_file.txt 
+ 1769  tail g_whl/log_file.txt 
+ 1770  tail h_wvv/log_file.txt 
+ 1771  tail a_xgt/log_file.txt 
+ 1772  tail b_xhc/log_file.txt 
+ 1773  tail c_mlp/log_file.txt 
+ 1774  tail d_dvn/log_file.txt 
+ 1775  tail e_ooy/log_file.txt 
+ 1776  tail f_cgz/log_file.txt 
+ 1777  tail g_whl/log_file.txt 
+ 1778  ls
+ 1779  tail h_wvv/log_file.txt 
+ 1780  ls
+ 1781  rm -R *
+ 1782  ../table_fuzzer.py --servers 8 --threads 64 --serve-flags "--cache-size 100"
+ 1783  git diff
+ 1784  git status
+ 1785  ls
+ 1786  rm -R *
+ 1787  ../table_fuzzer.py --servers 8 --threads 64 --serve-flags "--cache-size 100"
+ 1788  rm -R *
+ 1789  ../table_fuzzer.py --servers 8 --threads 64 --serve-flags "--cache-size 1"
+ 1790  ls
+ 1791  rm -R *
+ 1792  cd rethinkdb/test
+ 1793  ls
+ 1794  cd /home/ssd3/daniel/rethinkdb/test/results/2015-09-18T17\:57\:59.WoANtr/
+ 1795  ls
+ 1796  cat changefeeds.squash_true_multi/stderr 
+ 1797  cat changefeeds.squash_true_multi/stdout 
+ 1798  cat changefeeds.squash_true_multi/fail_message 
+ 1799  cat changefeeds.squash_true_multi/stderr 
+ 1800  htop 
+ 1801  killall python
+ 1802  killall rethinkdb
+ 1803  htop 
+ 1804  cd rethinkdb/test
+ 1805  ls
+ 1806  cd rql_test/
+ 1807  ls
+ 1808  cd src/
+ 1809  ls
+ 1810  grep indexStatus *
+ 1811  grep -R indexStatus *
+ 1812  grep -R index_status *
+ 1813  nano -w sindex/status.yaml 
+ 1814  cd ..
+ 1815  ./test-runner polyglot/sindex/status
+ 1816  nano -w sindex/status.yaml 
+ 1817  nano -w src/sindex/status.yaml 
+ 1818  nano -w sindex/status.yaml 
+ 1819  ./test-runner polyglot/sindex/status
+ 1820  nano -w sindex/status.yaml 
+ 1821  nano -w src/sindex/status.yaml 
+ 1822  ./test-runner polyglot/sindex/status
+ 1823  nano -w src/sindex/status.yaml 
+ 1824  ./test-runner polyglot/sindex/status
+ 1825  exit
+ 1826  cd interviews/
+ 1827  ls
+ 1828  git pull
+ 1829  cd systems-engineer/calc/candidates/anshul_pundir/
+ 1830  ls
+ 1831  g++ calc.cc -std=c++11
+ 1832  g++ calc.cc --std=c++11
+ 1833  g++ calc.cc
+ 1834  ls
+ 1835  man atof
+ 1836  nano -w calc.cc 
+ 1837  cp calc.cc tmp.cc
+ 1838  nano -w tmp.cc 
+ 1839  g++ tmp.cc 
+ 1840  ls
+ 1841  ./a.out 
+ 1842  1++5
+ 1843  ./a.out 
+ 1844  1+(2+(3*(4-5))))
+ 1845  (1+(2+(3*(4-))))
+ 1846  (1+2)*(3+4)/(5+6)/(7-(8/9))
+ 1847  ./a.out 
+ 1848  1+(2+(3*(4-5))))
+ 1849  (1+(2+(3*(4-))))
+ 1850  ls
+ 1851  cp calc_revised_extra_hour.cc tmp.cc 
+ 1852  nano -w tmp.cc 
+ 1853  g++ tmp.cc 
+ 1854  ./a.out 
+ 1855  (1+2)*(3+4)/(5+6)/(7-(8/9))
+ 1856  nano -w tmp.cc 
+ 1857  cp calc.cc tmp.cc 
+ 1858  g++ tmp.cc 
+ 1859  ./a.out 
+ 1860  g++ tmp.cc 
+ 1861  ./a.out 
+ 1862  ls
+ 1863  cat | ./a.out 
+ 1864  ./a.out 
+ 1865  ls
+ 1866  ls ..
+ 1867  ls ../ch
+ 1868  ls ../chris_kastorff/
+ 1869  ls ../chris_kastorff/expr/
+ 1870  ls
+ 1871  ls ..
+ 1872  ls
+ 1873  cat simple_input.txt | ./a.out 
+ 1874  ls
+ 1875  cat simple_input.txt 
+ 1876  ./a.out 
+ 1877  g++ tmp.cc 
+ 1878  cat simple_input.txt 
+ 1879  cat simple_output.txt 
+ 1880  cat simple_input.txt | ./a.out 
+ 1881  ls
+ 1882  cat medium_output.txt 
+ 1883  cat medium_input.txt | ./a.out 
+ 1884  cat hard_input.txt | ./a.out 
+ 1885  cat hard_output.txt 
+ 1886  ls
+ 1887  git add calc.cc calc_revised_extra_hour.cc 
+ 1888  git status
+ 1889  git commit 
+ 1890  git push
+ 1891  ls
+ 1892  cat hard_input.txt | ./a.out 
+ 1893  ls
+ 1894  nano -w simple_input.txt 
+ 1895  ./a.out 
+ 1896  ssh puzzler
+ 1897  cd rethinkdb/test
+ 1898  ls
+ 1899  ./run -j 4
+ 1900  ls
+ 1901  killall rethinkdb
+ 1902  killall python
+ 1903  rm -R results/*
+ 1904  ./run -j 4
+ 1905  killall python 
+ 1906  ./run -j 4 interface.artificial_table
+ 1907  cat /home/ssd3/daniel/rethinkdb/test/results/2015-09-24T14\:49\:31.sd2Rcj/interface.artificial_table/stderr 
+ 1908  cat /home/ssd3/daniel/rethinkdb/test/results/2015-09-24T14\:49\:31.sd2Rcj/interface.artificial_table/stdout 
+ 1909  cd ..
+ 1910  cd build/debug_clang/
+ 1911  ls
+ 1912  ./rethinkdb -o 23 --bind all
+ 1913  cd rethinkdb/drivers/javascript/
+ 1914  ls
+ 1915  grep ReqlDriverError *
+ 1916  grep ReqlCompileError *
+ 1917  grep ReqlDriverError *
+ 1918  grep -R "Anonymous function returned" *
+ 1919  grep -R "Object keys must be" *
+ 1920  grep -R "Object keys must" *
+ 1921  grep -R "Object key must" *
+ 1922  grep -R "must be str" *
+ 1923  grep -R "must be Str" *
+ 1924  ls
+ 1925  grep -R "may not be undefined" *
+ 1926  grep -R "Second argument" *
+ 1927  grep -R "you can override" *
+ 1928  grep -R "override" *
+ 1929  grep ReqlDriverError *
+ 1930  cd ..
+ 1931  cd python/
+ 1932  ls
+ 1933  cd rethinkdb/
+ 1934  ls
+ 1935  grep ReqlDriverError *
+ 1936  grep ReqlDriverError *.py
+ 1937  grep ReqlCompileError *.py
+ 1938  grep ReqlDriverError *.py
+ 1939  grep "Object keys must be" *
+ 1940  cd ..
+ 1941  cd ruby/
+ 1942  ls
+ 1943  cd lio
+ 1944  cd lib/
+ 1945  ls
+ 1946  grep ReqlCompileError
+ 1947  grep ReqlCompileError *
+ 1948  grep "Object keys" *
+ 1949  grep "Second arg" *&
+ 1950  grep "Second arg" *
+ 1951  grep "Second" *
+ 1952  cd /tmp/daniel
+ 1953  ls
+ 1954  rethinkdb -o 23 --bind all
+ 1955  ssh gantz
+ 1956  ssh gantz
+ 1957  ssh -l teapot gantz
+ 1958  ssh 72.14.189.19 -p 440
+ 1959  exit
+ 1960  ssh --help
+ 1961  man ssh
+ 1962  ls
+ 1963  df -h
+ 1964  ls
+ 1965  ls ssd2/
+ 1966  ls
+ 1967  mv -v ckastorff ssd2
+ 1968  ls
+ 1969  ls -l
+ 1970  ln -s ckastorff ssd2/ckastorff
+ 1971  cd ck
+ 1972  ls
+ 1973  rm ssd2/ckastorff/ckastorff 
+ 1974  ln -s ssd2/ckastorff ckastorff
+ 1975  cd ckastorff
+ 1976  ls
+ 1977  ls -lh
+ 1978  cd ..
+ 1979  ls
+ 1980  ls -l
+ 1981  exit
+ 1982  cd ..
+ 1983  ls
+ 1984  sudo -s
+ 1985  exit
+ 1986  df -h
+ 1987  htop 
+ 1988  killall rethinkdb
+ 1989  killall python
+ 1990  cd /tmp/
+ 1991  ls
+ 1992  rm -R *
+ 1993  rm -Rf *
+ 1994  exit
+ 1995  cd /tmp/
+ 1996  mkdir daniel
+ 1997  cd daniel
+ 1998  ls
+ 1999  rethinkdb -o 23 --bind all
+ 2000  ssh gantz
+ 2001  cd 2.1_benchmark/
+ 2002  ls
+ 2003  du -s client/
+ 2004  du -sh client/
+ 2005  cd client/YCSB/
+ 2006  ls
+ 2007  cd hbase/
+ 2008  ls
+ 2009  cd target/
+ 2010  ls
+ 2011  cd ..
+ 2012  cd h
+ 2013  cd hbase/
+ 2014  ls
+ 2015  mvn clean
+ 2016  cd ..
+ 2017  ls
+ 2018  cd cassandra/
+ 2019  mvn clean
+ 2020  cd ..
+ 2021  ls
+ 2022  cd dynamodb/
+ 2023  ls
+ 2024  mvn clean
+ 2025  cd ..
+ 2026  ls
+ 2027  cd elasticsearch/
+ 2028  mvn clean
+ 2029  cd ..
+ 2030  ls
+ 2031  cd hbase/
+ 2032  ls
+ 2033  cd ..
+ 2034  cd hypertable/
+ 2035  ls
+ 2036  mvn clean
+ 2037  cd ..
+ 2038  ls
+ 2039  cd mongodb/
+ 2040  ls
+ 2041  mvn clean
+ 2042  cd ..
+ 2043  ls
+ 2044  cd orientdb/
+ 2045  mvn clean
+ 2046  cd ..
+ 2047  ls
+ 2048  cd re
+ 2049  cd redis/
+ 2050  mvn clean
+ 2051  cd ..
+ 2052  cd voldemort/
+ 2053  ls
+ 2054  mvn clean
+ 2055  cd ..
+ 2056  ls
+ 2057  cd gemfire/
+ 2058  ls
+ 2059  cd ..
+ 2060  ls
+ 2061  cd nosqldb/
+ 2062  ls
+ 2063  cd ..
+ 2064  ls
+ 2065  cd mapkeeper/
+ 2066  ls
+ 2067  cd ..
+ 2068  ls
+ 2069  ls infinispan/
+ 2070  cd infinispan/
+ 2071  ls
+ 2072  mvn clean
+ 2073  cd ..
+ 2074  ls
+ 2075  cd jdbc/
+ 2076  ls
+ 2077  cd ..
+ 2078  ls
+ 2079  cd ..
+ 2080  du -sh YCSB/
+ 2081  cd ..
+ 2082  ls
+ 2083  less run.php 
+ 2084  ls
+ 2085  nano -w run.php 
+ 2086  php5 run.php 
+ 2087  nano -w run.php 
+ 2088  php5 run.php 
+ 2089  ls
+ 2090  cat results/error-104.130.19.148.err 
+ 2091  nano -w run.php 
+ 2092  php5 run.php 
+ 2093  cat results/error-104.130.19.148.err 
+ 2094  ls
+ 2095  ls results/
+ 2096  cat results/104.130.19.148.out 
+ 2097  cat results/104.130.19.148.er
+ 2098  cat results/104.130.19.148.out 
+ 2099  cat results/error-104.130.19.148.err 
+ 2100  nano -w run.php 
+ 2101  php5 run.php 
+ 2102  cat results/error-104.130.19.148.err 
+ 2103  ls results/
+ 2104  cat results/104.130.19.148.out 
+ 2105  nano -w run.php 
+ 2106  php5 run.php 
+ 2107  ssh -q -l root 104.130.19.148 "sh -c 'wait; ~/YCSB/bin/ycsb run rethinkdb -P ~/YCSB/workloads/c -p operationscount=10000 -p recordcount=25000000 -p rethinkdb.host=localhost -p rethinkdb.port=28015 -p rethinkdb.durability=hard -threads 128'"
+ 2108  ssh -q -l root 104.130.19.148 "sh -c '~/YCSB/bin/ycsb run rethinkdb -P ~/YCSB/workloads/c -p operationscount=10000 -p recordcount=25000000 -p rethinkdb.host=localhost -p rethinkdb.port=28015 -p rethinkdb.durability=hard -threads 128'"
+ 2109  ssh -q -l root 104.130.19.148 '~/YCSB/bin/ycsb run rethinkdb -P ~/YCSB/workloads/c -p operationscount=10000 -p recordcount=25000000 -p rethinkdb.host=localhost -p rethinkdb.port=28015 -p rethinkdb.durability=hard -threads 128'
+ 2110  ssh -l root 104.130.19.148 '~/YCSB/bin/ycsb run rethinkdb -P ~/YCSB/workloads/c -p operationscount=10000 -p recordcount=25000000 -p rethinkdb.host=localhost -p rethinkdb.port=28015 -p rethinkdb.durability=hard -threads 128'
+ 2111  ssh-agent 
+ 2112  SSH_AUTH_SOCK=/tmp/ssh-mhUYbsS13944/agent.13944; export SSH_AUTH_SOCK;
+ 2113  SSH_AGENT_PID=13945; export SSH_AGENT_PID;
+ 2114  echo Agent pid 13945;
+ 2115  ssh-add ~/.ssh/rackspace
+ 2116  ssh -l root 104.130.19.148 '~/YCSB/bin/ycsb run rethinkdb -P ~/YCSB/workloads/c -p operationscount=10000 -p recordcount=25000000 -p rethinkdb.host=localhost -p rethinkdb.port=28015 -p rethinkdb.durability=hard -threads 128'
+ 2117  nano -w run.php 
+ 2118  php5 run.php 
+ 2119  cat results/*
+ 2120  ls
+ 2121  less output.csv 
+ 2122  nano -w run.php 
+ 2123  ls
+ 2124  nano -w run.php 
+ 2125  php5 run.php 
+ 2126  cat results/*
+ 2127  nano -w run.php 
+ 2128  php5 run.php 
+ 2129  nano -w run.php 
+ 2130  cat results/*
+ 2131  cat results/error-104.130.19.148.err 
+ 2132  php5 run.php 
+ 2133  nano -w run.php 
+ 2134  php5 run.php 
+ 2135  nano -w run.php 
+ 2136  php5 run.php 
+ 2137  nano -w run.php 
+ 2138  php5 run.php 
+ 2139  nano -w run.php 
+ 2140  php5 run.php 
+ 2141  ls
+ 2142  nano -w setup.txt
+ 2143  cp ~/.ssh/rackspace* ./
+ 2144  mv rackspace id_rackspace
+ 2145  mv rackspace.pub id_rackspace.pub 
+ 2146  nano -w setup.txt
+ 2147  ls
+ 2148  mv setup.txt setup_client.sh
+ 2149  chmod +x setup_client.sh 
+ 2150  ls
+ 2151  ./setup_client.sh 104.130.19.50
+ 2152  nano -w setup.txt
+ 2153  `ssh-agent`
+ 2154  ssh-agent
+ 2155  eval(echo "wat")
+ 2156  eval
+ 2157  eval --help
+ 2158  man eval
+ 2159  exec --help
+ 2160  man exec
+ 2161  exec(`ssh-agent`)
+ 2162  nano -w setup.txt
+ 2163  nano -w setup_client.sh 
+ 2164  ./setup_client.sh 104.130.19.50
+ 2165  nano -w setup_client.sh 
+ 2166  s
+ 2167  ls
+ 2168  vi run.php 
+ 2169  php5 run.php 
+ 2170  vi run.php 
+ 2171  nano run.php 
+ 2172  php5 run.php 
+ 2173  ls
+ 2174  cat results/error-104.130.19.*
+ 2175  head results/104.130.19.148.out 
+ 2176  head results/104.130.19.50.out 
+ 2177  ls
+ 2178  rethinkdb import --help
+ 2179  clear
+ 2180  ls
+ 2181  nano -w run.php 
+ 2182  ls
+ 2183  ./ycsb_output_parser.py --help
+ 2184  nano -w run.php 
+ 2185  ./ycsb_output_parser.py -d results -o results
+ 2186  cat results/output.csv 
+ 2187  nano -w run.php 
+ 2188  php5 -a
+ 2189  nano -w run.php 
+ 2190  ls
+ 2191  nano -w run.php 
+ 2192  php5 -a
+ 2193  ls
+ 2194  ls result
+ 2195  ls results/
+ 2196  rmdir result
+ 2197  nano -w run.php 
+ 2198  ls
+ 2199  nano -w run.php 
+ 2200  php5 run.php 
+ 2201  ls
+ 2202  ls results/
+ 2203  ls archive/
+ 2204  cat results/error-104.130.19.*
+ 2205  ls archive/a-1-2000-2015-09-29T16\:37\:11-07\:00/
+ 2206  cat archive/a-1-2000-2015-09-29T16\:37\:11-07\:00/output.csv 
+ 2207  ls
+ 2208  nano -w run.php 
+ 2209  php5 run.php 
+ 2210  nano -w run.php 
+ 2211  php5 run.php 
+ 2212  nano -w run.php 
+ 2213  php5 run.php 
+ 2214  php5 run.php 104.130.19.148 104.130.19.148,104.130.19.50 c
+ 2215  php5 run.php 104.130.19.148 104.130.19.148,104.130.19.50 d
+ 2216  ls
+ 2217  ssh root@104.130.21.31
+ 2218  ls
+ 2219  nano -w run.php 
+ 2220  chmod +x run.php 
+ 2221  ./run.php 
+ 2222  ./run.php 104.130.21.31 104.130.19.148,104.130.19.50 c
+ 2223  ls
+ 2224  cat start_server.txt 
+ 2225  ./run.php 104.130.21.31,104.130.21.97 104.130.19.148,104.130.19.50 c
+ 2226  ./run.php 104.130.21.31 104.130.19.148,104.130.19.50 c
+ 2227  vi run.php 
+ 2228  ./run.php 104.130.21.31 104.130.19.148,104.130.19.50 c
+ 2229  cp run.php tmp.php 
+ 2230  vi tmp.php 
+ 2231  ./run.php 104.130.21.31,104.130.21.97 104.130.19.148,104.130.19.50 c
+ 2232  vi tmp.php 
+ 2233  ./tmp.php 104.130.21.31,104.130.21.97 104.130.19.148,104.130.19.50 c
+ 2234  ls
+ 2235  vim setup_server.sh 
+ 2236  ls
+ 2237  cat start_server.txt 
+ 2238  vim setup_server.sh 
+ 2239  mv setup_server.sh 
+ 2240  ls
+ 2241  cp start_server.txt start_rethinkdb.sh
+ 2242  vim start_rethinkdb.sh 
+ 2243  ls
+ 2244  vim setup_server.sh 
+ 2245  wget --help
+ 2246  wget https://www.dropbox.com/s/hwl43qi1kwhp9sw/rethinkdb?dl=1
+ 2247  vim setup_server.sh 
+ 2248  ls
+ 2249  vim setup_server.sh 
+ 2250  ls
+ 2251  ./setup_server.sh 23.253.157.122
+ 2252  vim ./setup_server.sh 
+ 2253  ./setup_server.sh 23.253.157.122
+ 2254  ls
+ 2255  vim server_list
+ 2256  wc -l server_list 
+ 2257  vim server_list
+ 2258  ls
+ 2259  less server_list 
+ 2260  nano server_list 
+ 2261  wc -l server_list 
+ 2262  for i in `cat server_list`; do ssh -i rackspace -l root $i; done
+ 2263  for i in `cat server_list`; do ssh -i ~/.ssh/rackspace -l root $i echo "ok"; done
+ 2264  ssh root@104.130.20.222
+ 2265  ls
+ 2266  ssh -l root 104.130.21.31
+ 2267  ssh -l root 104.130.21.97
+ 2268  ls
+ 2269  for i in `cat server_list`; do (./setup_server $i &) ; done
+ 2270  for i in `cat server_list`; do (./setup_server.sh $i &) ; done
+ 2271  ls
+ 2272  chmod +x start_
+ 2273  chmod +x start_rethinkdb.sh 
+ 2274  cat start_rethinkdb.sh 
+ 2275  for i in `cat server_list`; do (./start_rethinkdb.sh $i &) ; done
+ 2276  vim ./start_rethinkdb.sh 
+ 2277  for i in `cat server_list`; do (./start_rethinkdb.sh $i &) ; done
+ 2278  ls
+ 2279  vim client_list
+ 2280  ls
+ 2281  cat setup_client.sh 
+ 2282  cat client_list | xargs ./setup_client.sh 
+ 2283  ls
+ 2284  cat myfile.txt | tr -d '\n' 
+ 2285  cat server_list | tr - d '\n' 
+ 2286  cat server_list | tr - d '\\n' 
+ 2287  cat server_list | tr - d '\n' 
+ 2288  tr
+ 2289  cat server_list | tr -d '\n' 
+ 2290  cat server_list | tr -d ',' 
+ 2291  cat server_list | tr -d '' 
+ 2292  cat server_list | tr -d '\n' 
+ 2293  tr --help
+ 2294  man tr
+ 2295  cat server_list | paste -d,
+ 2296  cat server_list | paste -d, -
+ 2297  cat server_list | paste -d, - -
+ 2298  cat server_list | paste -d, - - -
+ 2299  cat server_list | paste -d, -*
+ 2300  cat server_list | paste -d, -
+ 2301  cat server_list | paste -d, - - - - -
+ 2302  cat server_list | paste -d, - - - - - -
+ 2303  cat server_list | paste -d, - - - - - - -
+ 2304  cat server_list | paste -d, --help
+ 2305  cat server_list | paste -d, -
+ 2306  paste -sd ",\n" server_list 
+ 2307  paste -sd "," server_list 
+ 2308  `paste -sd "," server_list `
+ 2309  `paste -sd "," server_list`
+ 2310  exec(paste -sd "," server_list )
+ 2311  exec(paste -sd "," server_list)
+ 2312  $(paste -sd "," server_list)
+ 2313  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list)  c
+ 2314  ls
+ 2315  for i in `cat client_list`; do (ssh -l root $i killall java) ; done
+ 2316  cat client
+ 2317  cat client_list 
+ 2318  ssh -l root 104.130.20.202
+ 2319  ssh -l root 104.130.20.20
+ 2320  ssh -l root 104.130.19.148
+ 2321  for i in `cat client_list`; do (./setup_client.sh $i &) ; done
+ 2322  for i in `cat client_list`; do (./setup_client.sh $i) ; done
+ 2323  cat client_list | xargs ./setup_client.sh {}
+ 2324  cat client_list | xargs ./setup_client.sh 
+ 2325  cat setup_client.sh l
+ 2326  cat setup_client.sh 
+ 2327  scp -avzhP ./client/ root@104.130.20.196:~
+ 2328  rsync -avzhP ./client/ root@104.130.20.196:~
+ 2329  rsync -avzhP ./client/ root@104.130.20.197:~
+ 2330  rsync -azhP ./client/ root@104.130.20.197:~
+ 2331  rsync -azhP ./client/YCSB root@104.130.20.197:~/YCSB
+ 2332  ls
+ 2333  vim setup_
+ 2334  vim setup_client.sh 
+ 2335  vim client_list 
+ 2336  ls
+ 2337  vim setup_client.sh 
+ 2338  ./setup_client.sh 104.130.18.136
+ 2339  ping 104.130.18.136
+ 2340  ./setup_client.sh 104.130.18.136
+ 2341  ls
+ 2342  vim setup_client.sh 
+ 2343  ./setup_client.sh 104.130.18.136
+ 2344  ./setup_client.sh 104.130.18.135
+ 2345  ./setup_client.sh 104.130.20.204
+ 2346  ./setup_client.sh 104.130.20.20
+ 2347  ./setup_client.sh 104.130.20.200
+ 2348  ./setup_client.sh 104.130.20.202
+ 2349  ssh root@104.130.20.202
+ 2350  ls
+ 2351  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list)  c
+ 2352  vim ./run.php 
+ 2353  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list)  c
+ 2354  ls
+ 2355  ./start_rethinkdb.sh 23.253.157.128
+ 2356  ./start_rethinkdb.sh 104.130.20.222
+ 2357  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c
+ 2358  ./vim run.php 
+ 2359  vim run.php 
+ 2360  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c
+ 2361  vim run.php 
+ 2362  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c
+ 2363  vim run.php 
+ 2364  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c
+ 2365  vim run.php 
+ 2366  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c
+ 2367  vim run.php 
+ 2368  ls
+ 2369  rm archive/
+ 2370  ls archive/
+ 2371  rm -R archive/*
+ 2372  ls archive/
+ 2373  rethinkdb --help
+ 2374  vim ./start_server.txt 
+ 2375  ls
+ 2376  vim ./start_rethinkdb.sh 
+ 2377  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) a
+ 2378  history
+ 2379  vim ./setup_client.sh 
+ 2380  ls
+ 2381  cat client_list | xargs ./setup_client.sh 
+ 2382  cat client_list | echo
+ 2383  cat client_list | echo $
+ 2384  cat client_list | echo $1
+ 2385  cat client_list | echo 
+ 2386  cat client_list | xargs echo 
+ 2387  cat client_list 
+ 2388  cat client_list | xargs -0
+ 2389  cat client_list | xargs -0 echo
+ 2390* cat client_list | xargs -0 - ./setup_client.sh 
+ 2391  cat client_list | xargs -0 echo "test"
+ 2392  cat client_list | xargs --help echo "test"
+ 2393  cat client_list | xargs -E "\n" echo "test"
+ 2394  cat client_list | xargs -e "\n" echo "test"
+ 2395  cat client_list | xargs -d "\n" echo "test"
+ 2396  cat client_list | xargs -d "\\n" echo "test"
+ 2397  cat client_list | xargs -d "\\\n" echo "test"
+ 2398  cat client_list | xargs 
+ 2399  cat client_list | xargs -0 
+ 2400  cat client_list | xargs -0 wc -
+ 2401  cat client_list | xargs -0 wc -l
+ 2402  cat client_list | xargs -0 "wc -l"
+ 2403  cat client_list | xargs -0 -e wc -l
+ 2404  cat client_list | xargs -0 wc -l
+ 2405* cat client_list | xargs 
+ 2406  cat client_list | xargs -0 wc 
+ 2407  for i in `cat client_list`; do (./setup_client.sh $i &) ; done
+ 2408  nano -w run.php 
+ 2409  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c-outdated
+ 2410  vim ./run.php 
+ 2411  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c-outdated
+ 2412  cat server_list 
+ 2413  rm -r archive/*
+ 2414  ls archive/
+ 2415  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c-outdated
+ 2416  cat results/*.err
+ 2417  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c
+ 2418  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c-outdated
+ 2419  ls
+ 2420  ./setup_client.sh 
+ 2421  vim ./setup_client.sh 
+ 2422  for i in `cat client_list`; do (./setup_client.sh $i &) ; done
+ 2423  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c-outdated
+ 2424  ssh -l root 104.130.20.200
+ 2425  vim ./setup_client.sh 
+ 2426  for i in `cat client_list`; do (./setup_client.sh $i &) ; done
+ 2427  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c-outdated
+ 2428  rm -r archive/*
+ 2429  ./run.php $(paste -sd "," server_list) $(paste -sd "," client_list) c-outdated
+ 2430  history
+ 2431  history > command_history.history

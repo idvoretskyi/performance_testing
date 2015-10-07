@@ -1,0 +1,60 @@
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+java.lang.NullPointerException
+	at com.yahoo.ycsb.StringByteIterator.putAllAsByteIterators(StringByteIterator.java:32)
+	at com.yahoo.ycsb.db.RethinkDBClient.read(RethinkDBClient.java:133)
+	at com.yahoo.ycsb.DBWrapper.read(DBWrapper.java:90)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionRead(CoreWorkload.java:537)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:479)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:233)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.StringByteIterator.putAllAsByteIterators(StringByteIterator.java:32)
+	at com.yahoo.ycsb.db.RethinkDBClient.read(RethinkDBClient.java:133)
+	at com.yahoo.ycsb.DBWrapper.read(DBWrapper.java:90)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionRead(CoreWorkload.java:537)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:479)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:233)
+java.lang.NullPointerException
+	at com.yahoo.ycsb.StringByteIterator.putAllAsByteIterators(StringByteIterator.java:32)
+	at com.yahoo.ycsb.db.RethinkDBClient.read(RethinkDBClient.java:133)
+	at com.yahoo.ycsb.DBWrapper.read(DBWrapper.java:90)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransactionRead(CoreWorkload.java:537)
+	at com.yahoo.ycsb.workloads.CoreWorkload.doTransaction(CoreWorkload.java:479)
+	at com.yahoo.ycsb.ClientThread.run(Client.java:233)
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
+java.lang.NullPointerException
