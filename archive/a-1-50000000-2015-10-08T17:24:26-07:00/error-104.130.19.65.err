@@ -26,7 +26,3 @@ java.lang.NullPointerException
 	at com.yahoo.ycsb.ClientThread.run(Client.java:233)
 java.lang.NullPointerException
 java.lang.NullPointerException
-java.lang.NullPointerException
-java.lang.NullPointerException
-java.lang.NullPointerException
-java.lang.NullPointerException
